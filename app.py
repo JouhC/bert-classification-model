@@ -1,12 +1,10 @@
-"""Streamlit app to generate Tweets."""
+"""Streamlit app to identify object components."""
 
 # Import from standard library
 import logging
-import json
 
 # Import from 3rd party libraries
 import streamlit as st
-import streamlit.components.v1 as components
 import streamlit_analytics
 
 # Import modules
@@ -17,7 +15,7 @@ logging.basicConfig(format="\n%(asctime)s\n%(message)s", level=logging.INFO, for
 
 # Define functions
 def run_identify(object: str = ""):
-    """Generate Tweet text."""
+    """Object Components Identifier"""
     if st.session_state.n_requests >= 5:
         st.session_state.text_error = "Too many requests. Please wait a few seconds before generating another Analysis."
         logging.info(f"Session request limit reached: {st.session_state.n_requests}")
