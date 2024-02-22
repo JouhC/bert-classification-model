@@ -1,6 +1,3 @@
-# Profit Analyzer App
+# Object Classifier App
 
-Updating live version
-
-## Description
-This Streamlit mini-app generates Analysis using OpenAI's GPTs. It provides insights into profitability by analyzing and determining key budgets as a percentage of revenue. With our app, you can make informed decisions for success in your industry
+The Object Classifier App is a powerful tool for classifying textual descriptions of objects using cutting-edge artificial intelligence models. With this application, users can input an object, and the AI model will analyze and providing detailed information about the components or attributes of the object.
