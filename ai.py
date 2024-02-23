@@ -53,7 +53,8 @@ class Classifier:
         components = LABEL_ENCODER.inverse_transform(predicted_classes)
         trimmer = lambda x: x.strip()
         compfunc = np.vectorize(trimmer)
-        components = compfunc(components)
+        components = compfunc(components) if not components.size == 0 else ["N/A"]
+        confidence_levels = confidence_levels if not confidence_levels.size == 0 else [0]
 
         output = ''.join((f" - {component} with an inference score of {'%.4f' % level}\n" for component, level in zip(components, confidence_levels)))
         return output

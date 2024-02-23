@@ -16,7 +16,7 @@ logging.basicConfig(format="\n%(asctime)s\n%(message)s", level=logging.INFO, for
 # Define functions
 def run_identify(object: str = ""):
     """Object Components Identifier"""
-    if st.session_state.n_requests >= 5:
+    if st.session_state.n_requests >= 20:
         st.session_state.text_error = "Too many requests. Please wait a few seconds before generating another Analysis."
         logging.info(f"Session request limit reached: {st.session_state.n_requests}")
         st.session_state.n_requests = 1
